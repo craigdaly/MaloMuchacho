@@ -10,6 +10,7 @@
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 #import "PlayingCard.h"
+#import "GameResults.h"
 
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -18,6 +19,8 @@
 @property (nonatomic) int flipCount;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *dealButton;
+@property (weak, nonatomic) IBOutlet UITabBarItem *barItem;
+
 
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
@@ -37,21 +40,20 @@
 // # of cards faceUp
 @property (nonatomic) int faceUpCards;
 @property (nonatomic) int cardsFaceUpAndDisabled;
+
+
+@property (strong, nonatomic) GameResults *gameResults;
 @end
 
 @implementation CardGameViewController
 
 
-// lazily instantiate a Deck object
-/*
-- (Deck *)deck
+ // lazy instantiation
+- (GameResults *)gameResults
 {
-    if(!_deck) {
-        _deck = [[PlayingCardDeck alloc] init];
-    }
-    return _deck;
+    if(!_gameResults) _gameResults = [[GameResults alloc] init];
+    return _gameResults;
 }
-*/
 
 - (NSMutableArray *)pastMoves
 {
@@ -84,22 +86,11 @@
 - (IBAction)dealNewDeckResetUI:(UIButton *)sender
 {
     //NSLog(@"%s", __PRETTY_FUNCTION__);
-    // not bad but not as elegant as 3 lines of code
-    /*
-    self.flipsLabel.text = @"Score: 0";
-    self.scoreLabel.text = @"flips: 0";
-    self.cardMatchingState.text = @"";
-    for(UIButton *button in self.cardButtons) {
-        if(button.selected) {
-            button.selected = !button.selected;
-            button.enabled = YES;
-            button.alpha = 1.0;
-        }
-    }
-    */
+    
     // forces the setter to instantiate a new CardMatchinGame
     self.game = nil;
     self.pastMoves = nil;
+    self.gameResults = nil;
     
     // the only UI element updated in this class
     self.flipCount = 0;
@@ -108,7 +99,6 @@
    
     for(UIButton *button in self.cardButtons) {
         button.userInteractionEnabled = YES;
-        //button.alpha = 0.3;
     }
     
     self.segmentedControl.enabled = YES;
@@ -165,7 +155,7 @@
         button.alpha = 0.3;
     }
     
-    
+   
     // set up inital slider values
     // set slider value on launch + sliders minimumValue
     [self.slider setValue:0.0];
@@ -178,7 +168,7 @@
     [self.segmentedControl setTitle:@"2-card-match mode" forSegmentAtIndex:0];
     [self.segmentedControl setTitle:@"3-card-match mode" forSegmentAtIndex:1];
     
-    //NSLog(@"[self.game.matchingBool initialVal]: %@", self.game.matchingBool ? @"YES" : @"NO");
+    
     
 }
 
@@ -190,7 +180,7 @@
     if([self.pastMoves count]) [self.slider setMaximumValue:([self.pastMoves count] + 1)];
 
     // background image for the  card
-    UIImage *cardButtonBackgroundImage = [UIImage imageNamed:@"pie50x50.png"];
+    UIImage *cardButtonBackgroundImage = [UIImage imageNamed:@"appIcon30x30.png"];
     for (UIButton *cardButton in self.cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject: cardButton]];
         
@@ -253,20 +243,18 @@
 }
 
 // flips card 
-// disables the UISegmentedController ... took this out 
+// disables the UISegmentedController
 - (IBAction)flipCard:(UIButton *)sender
 {
     //NSLog(@"%s", __PRETTY_FUNCTION__);
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject: sender]];
-    /*
-    [self.segmentedControl setEnabled:NO forSegmentAtIndex:0];
-    [self.segmentedControl setEnabled:NO forSegmentAtIndex:1];
-    */
+    
     
     self.segmentedControl.enabled = NO;
     
     self.flipCount++;
     [self updateUI];
+    self.gameResults.score = self.game.score;
 }
 
 - (void)setFlipCount:(int)flipCount

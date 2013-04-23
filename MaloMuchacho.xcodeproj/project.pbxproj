@@ -14,9 +14,6 @@
 		CB70BD7316C9C09000A41D9B /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = CB70BD7216C9C09000A41D9B /* Deck.m */; };
 		CB70BD7616C9CB5400A41D9B /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = CB70BD7516C9CB5400A41D9B /* PlayingCard.m */; };
 		CB70BD7916CB13A800A41D9B /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB70BD7816CB13A800A41D9B /* CardGameViewController.m */; };
-		CB7BA847170A1B6200336972 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA845170A1B6200336972 /* Default.png */; };
-		CB7BA848170A1B6200336972 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA846170A1B6200336972 /* Default@2x.png */; };
-		CB7BA84A170A1BEC00336972 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA849170A1BEC00336972 /* Default-568h@2x.png */; };
 		CBA99DF216C597E00004DB3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA99DF116C597E00004DB3C /* UIKit.framework */; };
 		CBA99DF416C597E00004DB3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA99DF316C597E00004DB3C /* Foundation.framework */; };
 		CBA99DF616C597E00004DB3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA99DF516C597E00004DB3C /* CoreGraphics.framework */; };
@@ -26,11 +23,18 @@
 		CBA99E0416C597E00004DB3C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA99E0316C597E00004DB3C /* Default.png */; };
 		CBA99E0616C597E00004DB3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA99E0516C597E00004DB3C /* Default@2x.png */; };
 		CBA99E0816C597E00004DB3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA99E0716C597E00004DB3C /* Default-568h@2x.png */; };
+		CBBDCD7E1718A916008D1C1D /* GameResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBDCD7D1718A916008D1C1D /* GameResultsViewController.m */; };
+		CBBDCD861718BB0C008D1C1D /* appIcon30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBDCD851718BB0C008D1C1D /* appIcon30x30.png */; };
+		CBBDCD8A1718CD06008D1C1D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBDCD871718CD06008D1C1D /* star.png */; };
+		CBBDCD8B1718CD06008D1C1D /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBDCD881718CD06008D1C1D /* globe.png */; };
+		CBBDCD8C1718CD06008D1C1D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBDCD891718CD06008D1C1D /* play.png */; };
+		CBBF72CD171F1DB000593B29 /* GameResults.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBF72CC171F1DB000593B29 /* GameResults.m */; };
 		CBDBD0861715DE1A00F2728F /* Badges30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDBD0851715DE1A00F2728F /* Badges30x30.png */; };
 		CBDBD0901715E5A300F2728F /* pie40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDBD08E1715E5A300F2728F /* pie40x40.png */; };
 		CBDBD0911715E5A300F2728F /* pie50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDBD08F1715E5A300F2728F /* pie50x50.png */; };
 		CBDBD0941715E5D000F2728F /* appIconHiRes.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDBD0921715E5D000F2728F /* appIconHiRes.png */; };
 		CBDBD0951715E5D000F2728F /* appIconLowRes.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDBD0931715E5D000F2728F /* appIconLowRes.png */; };
+		CBF33D6F1727236B0025CADF /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF33D6E1727236B0025CADF /* SetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,11 +67,21 @@
 		CBA99E0316C597E00004DB3C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CBA99E0516C597E00004DB3C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CBA99E0716C597E00004DB3C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CBBDCD7C1718A916008D1C1D /* GameResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultsViewController.h; sourceTree = "<group>"; };
+		CBBDCD7D1718A916008D1C1D /* GameResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultsViewController.m; sourceTree = "<group>"; };
+		CBBDCD851718BB0C008D1C1D /* appIcon30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon30x30.png; sourceTree = "<group>"; };
+		CBBDCD871718CD06008D1C1D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		CBBDCD881718CD06008D1C1D /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		CBBDCD891718CD06008D1C1D /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		CBBF72CB171F1DB000593B29 /* GameResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameResults.h; path = ViewControllers/GameResults.h; sourceTree = "<group>"; };
+		CBBF72CC171F1DB000593B29 /* GameResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameResults.m; path = ViewControllers/GameResults.m; sourceTree = "<group>"; };
 		CBDBD0851715DE1A00F2728F /* Badges30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Badges30x30.png; sourceTree = "<group>"; };
 		CBDBD08E1715E5A300F2728F /* pie40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie40x40.png; sourceTree = "<group>"; };
 		CBDBD08F1715E5A300F2728F /* pie50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie50x50.png; sourceTree = "<group>"; };
 		CBDBD0921715E5D000F2728F /* appIconHiRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appIconHiRes.png; path = ../appIconHiRes.png; sourceTree = "<group>"; };
 		CBDBD0931715E5D000F2728F /* appIconLowRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appIconLowRes.png; path = ../appIconLowRes.png; sourceTree = "<group>"; };
+		CBF33D6D1727236B0025CADF /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetViewController.h; path = ViewControllers/SetViewController.h; sourceTree = "<group>"; };
+		CBF33D6E1727236B0025CADF /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetViewController.m; path = ViewControllers/SetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,10 @@
 		CB3BFEA01704FD1900DA72A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CBBDCD871718CD06008D1C1D /* star.png */,
+				CBBDCD881718CD06008D1C1D /* globe.png */,
+				CBBDCD891718CD06008D1C1D /* play.png */,
+				CBBDCD851718BB0C008D1C1D /* appIcon30x30.png */,
 				CBDBD0921715E5D000F2728F /* appIconHiRes.png */,
 				CBDBD0931715E5D000F2728F /* appIconLowRes.png */,
 				CBDBD08E1715E5A300F2728F /* pie40x40.png */,
@@ -104,6 +122,12 @@
 			children = (
 				CB70BD7716CB13A800A41D9B /* CardGameViewController.h */,
 				CB70BD7816CB13A800A41D9B /* CardGameViewController.m */,
+				CBBDCD7C1718A916008D1C1D /* GameResultsViewController.h */,
+				CBBDCD7D1718A916008D1C1D /* GameResultsViewController.m */,
+				CBF33D6D1727236B0025CADF /* SetViewController.h */,
+				CBF33D6E1727236B0025CADF /* SetViewController.m */,
+				CBBF72CB171F1DB000593B29 /* GameResults.h */,
+				CBBF72CC171F1DB000593B29 /* GameResults.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -244,14 +268,15 @@
 				CBA99E0616C597E00004DB3C /* Default@2x.png in Resources */,
 				CBA99E0816C597E00004DB3C /* Default-568h@2x.png in Resources */,
 				CB70BD7016C9C07200A41D9B /* MainStoryboard.storyboard in Resources */,
-				CB7BA847170A1B6200336972 /* Default.png in Resources */,
-				CB7BA848170A1B6200336972 /* Default@2x.png in Resources */,
-				CB7BA84A170A1BEC00336972 /* Default-568h@2x.png in Resources */,
 				CBDBD0861715DE1A00F2728F /* Badges30x30.png in Resources */,
 				CBDBD0901715E5A300F2728F /* pie40x40.png in Resources */,
 				CBDBD0911715E5A300F2728F /* pie50x50.png in Resources */,
 				CBDBD0941715E5D000F2728F /* appIconHiRes.png in Resources */,
 				CBDBD0951715E5D000F2728F /* appIconLowRes.png in Resources */,
+				CBBDCD861718BB0C008D1C1D /* appIcon30x30.png in Resources */,
+				CBBDCD8A1718CD06008D1C1D /* star.png in Resources */,
+				CBBDCD8B1718CD06008D1C1D /* globe.png in Resources */,
+				CBBDCD8C1718CD06008D1C1D /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +295,9 @@
 				CB70BD7916CB13A800A41D9B /* CardGameViewController.m in Sources */,
 				CB3BFE9F17038ABA00DA72A2 /* PlayingCardDeck.m in Sources */,
 				CB3BFEC8170627C000DA72A2 /* CardMatchingGame.m in Sources */,
+				CBBDCD7E1718A916008D1C1D /* GameResultsViewController.m in Sources */,
+				CBBF72CD171F1DB000593B29 /* GameResults.m in Sources */,
+				CBF33D6F1727236B0025CADF /* SetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
