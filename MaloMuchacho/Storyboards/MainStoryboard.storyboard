@@ -342,7 +342,7 @@
                                     <action selector="dealNewDeckResetUI:" destination="Z5T-Gh-r5t" eventType="touchUpInside" id="rfe-Tq-27m"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4fc-A5-us8">
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4fc-A5-us8">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216" id="ge0-Hv-RhV"/>
                                 </constraints>
@@ -381,7 +381,6 @@
                             <constraint firstItem="Tfs-Kg-WNa" firstAttribute="bottom" secondItem="W0k-MY-x8f" secondAttribute="bottom" type="default" id="3xb-1p-EAG"/>
                             <constraint firstItem="6cV-uN-eXn" firstAttribute="top" secondItem="jYY-Qw-WL2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4rK-pV-QgA"/>
                             <constraint firstItem="ngk-Qd-Zv8" firstAttribute="top" secondItem="QHU-bY-taB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5CE-2K-0yn"/>
-                            <constraint firstItem="Qmj-Zj-iFq" firstAttribute="top" secondItem="DdE-HE-T6A" secondAttribute="top" constant="211" id="7UO-Sk-VDR"/>
                             <constraint firstItem="Qmj-Zj-iFq" firstAttribute="leading" secondItem="ZbN-dl-iEu" secondAttribute="leading" type="default" id="8Ap-Ch-N1o"/>
                             <constraint firstItem="W0k-MY-x8f" firstAttribute="top" secondItem="Tfs-Kg-WNa" secondAttribute="top" type="default" id="BAL-rS-uKw"/>
                             <constraint firstItem="ZbN-dl-iEu" firstAttribute="top" secondItem="HFt-Oy-sT1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BR3-Pw-gO5"/>
@@ -389,22 +388,24 @@
                             <constraint firstItem="9md-Gz-LXv" firstAttribute="top" secondItem="6cV-uN-eXn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Biz-2i-euk"/>
                             <constraint firstAttribute="bottom" secondItem="5kl-bc-sKk" secondAttribute="bottom" constant="26" id="BtC-ng-Yil"/>
                             <constraint firstItem="6cV-uN-eXn" firstAttribute="leading" secondItem="jYY-Qw-WL2" secondAttribute="leading" type="default" id="D2X-35-qPU"/>
+                            <constraint firstItem="ngk-Qd-Zv8" firstAttribute="top" secondItem="Tfs-Kg-WNa" secondAttribute="top" type="default" id="DWG-RH-Zaf"/>
                             <constraint firstItem="21B-gO-Fr3" firstAttribute="leading" secondItem="5kl-bc-sKk" secondAttribute="leading" type="default" id="E9X-rb-wtr"/>
-                            <constraint firstAttribute="trailing" secondItem="QHU-bY-taB" secondAttribute="trailing" constant="12" id="GAw-I6-REf"/>
                             <constraint firstItem="Tfs-Kg-WNa" firstAttribute="bottom" secondItem="ngk-Qd-Zv8" secondAttribute="bottom" type="default" id="Hch-yp-ivA"/>
                             <constraint firstAttribute="trailing" secondItem="Hvz-Db-2Qt" secondAttribute="trailing" constant="13" id="JY2-hJ-xVA"/>
                             <constraint firstAttribute="bottom" secondItem="21B-gO-Fr3" secondAttribute="bottom" constant="46" id="JwW-MW-3bx"/>
                             <constraint firstItem="Tfs-Kg-WNa" firstAttribute="top" secondItem="9md-Gz-LXv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MUL-T9-1Fs"/>
+                            <constraint firstItem="EfS-nX-pXY" firstAttribute="trailing" secondItem="ngk-Qd-Zv8" secondAttribute="trailing" type="default" id="MsB-V1-6gd"/>
                             <constraint firstItem="ngk-Qd-Zv8" firstAttribute="trailing" secondItem="QHU-bY-taB" secondAttribute="trailing" type="default" id="O05-UP-AxQ"/>
                             <constraint firstItem="UVl-JW-QlY" firstAttribute="top" secondItem="PcN-Ue-hKs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="O36-0z-vmn"/>
                             <constraint firstItem="HFt-Oy-sT1" firstAttribute="leading" secondItem="Xsk-Fv-dYe" secondAttribute="leading" type="default" id="P2D-9H-Cga"/>
+                            <constraint firstAttribute="bottom" secondItem="4fc-A5-us8" secondAttribute="bottom" constant="90" id="Qap-fc-zyI"/>
                             <constraint firstItem="lOg-Xz-IWS" firstAttribute="baseline" secondItem="vGK-c9-INo" secondAttribute="baseline" type="default" id="RxB-Kv-aoH"/>
                             <constraint firstItem="MQ6-p9-EY2" firstAttribute="top" secondItem="DdE-HE-T6A" secondAttribute="top" constant="9" id="T11-hQ-11T"/>
                             <constraint firstItem="jYY-Qw-WL2" firstAttribute="top" secondItem="MQ6-p9-EY2" secondAttribute="top" type="default" id="Tve-Gs-6BA"/>
                             <constraint firstItem="DFD-LM-CTa" firstAttribute="trailing" secondItem="Hvz-Db-2Qt" secondAttribute="trailing" type="default" id="UV0-UM-tLJ"/>
                             <constraint firstItem="jYY-Qw-WL2" firstAttribute="top" secondItem="Xsk-Fv-dYe" secondAttribute="top" type="default" id="Ugy-hu-8w1"/>
                             <constraint firstItem="9md-Gz-LXv" firstAttribute="top" secondItem="UVl-JW-QlY" secondAttribute="top" type="default" id="Utn-QR-58F"/>
-                            <constraint firstItem="ngk-Qd-Zv8" firstAttribute="top" secondItem="Tfs-Kg-WNa" secondAttribute="top" type="default" id="V3I-Xn-C4v"/>
+                            <constraint firstAttribute="trailing" secondItem="QHU-bY-taB" secondAttribute="trailing" constant="12" id="X7p-43-3vx"/>
                             <constraint firstItem="lOg-Xz-IWS" firstAttribute="top" secondItem="vGK-c9-INo" secondAttribute="top" type="default" id="YoP-Bc-OCA"/>
                             <constraint firstItem="4fc-A5-us8" firstAttribute="leading" secondItem="PcN-Ue-hKs" secondAttribute="leading" type="default" id="Ztw-FD-Pie"/>
                             <constraint firstItem="HFt-Oy-sT1" firstAttribute="top" secondItem="Xsk-Fv-dYe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aQC-bE-lvs"/>
@@ -416,7 +417,6 @@
                             <constraint firstItem="9md-Gz-LXv" firstAttribute="leading" secondItem="DdE-HE-T6A" secondAttribute="leading" constant="92" id="gBB-1t-okY"/>
                             <constraint firstItem="21B-gO-Fr3" firstAttribute="trailing" secondItem="CfI-nH-l7f" secondAttribute="trailing" type="default" id="gLV-Fa-I1T"/>
                             <constraint firstItem="PcN-Ue-hKs" firstAttribute="top" secondItem="MQ6-p9-EY2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gOM-AC-ROj"/>
-                            <constraint firstItem="EfS-nX-pXY" firstAttribute="trailing" secondItem="ngk-Qd-Zv8" secondAttribute="trailing" type="default" id="hjP-FC-XNT"/>
                             <constraint firstItem="EfS-nX-pXY" firstAttribute="top" secondItem="4fc-A5-us8" secondAttribute="top" type="default" id="i2f-Vk-G8y"/>
                             <constraint firstItem="6cV-uN-eXn" firstAttribute="centerX" secondItem="4fc-A5-us8" secondAttribute="centerX" type="default" id="ins-C7-gWT"/>
                             <constraint firstItem="PcN-Ue-hKs" firstAttribute="leading" secondItem="MQ6-p9-EY2" secondAttribute="leading" type="default" id="jKW-Yy-YQ2"/>
@@ -474,22 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghn-0c-Act" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5700" y="-917"/>
-        </scene>
-        <!--Set View Controller - Set-->
-        <scene sceneID="lEx-Iy-yUS">
-            <objects>
-                <viewController id="7HA-pQ-AY4" customClass="SetViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XAv-7i-tmH">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Set" image="globe.png" id="Smw-uZ-Pwr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fdr-fe-6L1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5372" y="-242"/>
+            <point key="canvasLocation" x="-5277" y="-786"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gww-C8-Lct">
@@ -504,12 +489,11 @@
                     <connections>
                         <segue destination="Z5T-Gh-r5t" kind="relationship" relationship="viewControllers" id="kCw-SD-DQw"/>
                         <segue destination="db3-Qc-9YM" kind="relationship" relationship="viewControllers" id="bAM-2o-XLF"/>
-                        <segue destination="7HA-pQ-AY4" kind="relationship" relationship="viewControllers" id="XfI-5e-19P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cD6-mg-CHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6189" y="-612"/>
+            <point key="canvasLocation" x="-6510" y="-786"/>
         </scene>
         <!--Game Results View Controller - Scores-->
         <scene sceneID="S07-Eq-a7S">
@@ -593,11 +577,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wT-MA-O8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5876" y="50"/>
+            <point key="canvasLocation" x="-5764" y="-374"/>
         </scene>
     </scenes>
     <resources>
-        <image name="globe.png" width="26" height="26"/>
         <image name="play.png" width="26" height="26"/>
         <image name="star.png" width="26" height="26"/>
     </resources>
@@ -605,12 +588,14 @@
         <class className="CardGameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CardGameViewController.h"/>
             <relationships>
+                <relationship kind="action" name="dealNewDeckResetUI:" candidateClass="UIButton"/>
+                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sliderDisplayPastMoves:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="barItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="cardMatchingState" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dealButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="sliderLabel" candidateClass="UILabel"/>
                 <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
@@ -619,14 +604,14 @@
         <class className="GameResultsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameResultsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="sortByDate:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sortByDuration:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sortByScore:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="display" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SetViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

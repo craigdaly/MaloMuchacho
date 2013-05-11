@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cardMatchingState;
 @property (nonatomic) int flipCount;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+//@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *dealButton;
 @property (weak, nonatomic) IBOutlet UITabBarItem *barItem;
 
@@ -61,8 +61,8 @@
     return _pastMoves;
 }
 
-
-
+// UISegmentedControl is hidden in Assignment #2
+/*
 // resets the labels, enables + flips the cards on screen
 - (IBAction)numberOfCardsToMatch:(UISegmentedControl *)sender
 {
@@ -72,6 +72,7 @@
     if(sender.selectedSegmentIndex == 1) self.game.matchingBool = YES;
     //NSLog(@"self.game.matchingBool: %@", self.game.matchingBool ? @"YES" : @"NO");
 }
+*/
 
 - (IBAction)sliderDisplayPastMoves:(UISlider *)sender
 {
@@ -101,11 +102,14 @@
         button.userInteractionEnabled = YES;
     }
     
+    // UISegmentedControl is hidden in Assignment #2
+    /*
     self.segmentedControl.enabled = YES;
     
-    /* handles the corner case where initially the buttons are frozen & the card-matching-state BOOL was not being set */
+    // handles the corner case where initially the buttons are frozen & the card-matching-state BOOL was not being set
     if(self.segmentedControl.selectedSegmentIndex == 0) self.game.matchingBool = NO;
     if(self.segmentedControl.selectedSegmentIndex == 1) self.game.matchingBool = YES;
+    */
     
     // do the heavy lifting
     [self updateUI];
@@ -140,9 +144,11 @@
     //NSLog(@"%s", __PRETTY_FUNCTION__);
     [super viewDidLoad];
     
+    // UISegmentedControl is hidden in Assignment #2
+    /*
     // sets the font of test on the UISegmentedContol
     [[UISegmentedControl appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"STHeitiSC-Medium" size:10.0], UITextAttributeFont, nil] forState:UIControlStateNormal];
-    
+    */
     // on INITIAL viewDidLoad or after the game has been killed only the UISegmentedCOntrol is enabled
     
     // enables the Deal button on viewDidLoad
@@ -161,13 +167,14 @@
     [self.slider setValue:0.0];
     [self.slider setMinimumValue:0.0];
     
+    // UISegmentedControl is hidden in Assignment #2
+    /*
+     UISegmentedControl is disabled in Assignement #2
     
-        
-    
-    // initially disables the UISegmentedControl 
+     // initially disables the UISegmentedControl
     [self.segmentedControl setTitle:@"2-card-match mode" forSegmentAtIndex:0];
     [self.segmentedControl setTitle:@"3-card-match mode" forSegmentAtIndex:1];
-    
+    */
     
     
 }
@@ -249,8 +256,10 @@
     //NSLog(@"%s", __PRETTY_FUNCTION__);
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject: sender]];
     
-    
+    // UISegmentedControl is hidden in Assignment #2
+    /*
     self.segmentedControl.enabled = NO;
+    */
     
     self.flipCount++;
     [self updateUI];

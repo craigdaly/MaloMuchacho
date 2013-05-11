@@ -9,17 +9,25 @@
 #import "SetViewController.h"
 
 @interface SetViewController ()
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *setGameButtons;
 
 @end
 
 @implementation SetViewController
 
+- (void)setUp
+{
+    // initialization that can't wait until viewDidLoad
+}
+- (void)awakeFromNib
+{
+    [self setUp];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    [self setUp];
     return self;
 }
 
@@ -29,10 +37,6 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
