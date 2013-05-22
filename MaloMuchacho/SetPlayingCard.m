@@ -8,16 +8,86 @@
 
 #import "SetPlayingCard.h"
 
+#define THREE 3
+#define ONE 1
+
 @implementation SetPlayingCard
 
 @synthesize shape = _shape;
+@synthesize numberOfShapesToDraw = _numberOfShapesToDraw;
+@synthesize shaded = _shaded;
+@synthesize color = _color;
 
 
+#pragma mark lazy instantiation
+
+- (NSString *)drawingString
+{
+    if(!_drawingString) _drawingString = @"";
+    return _drawingString;
+}
+
+- (NSString *)contents
+{
+    if(_drawingString) return self.drawingString;
+    else return @"?";
+}
+
+- (NSString *)color
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    _color = [[SetPlayingCard validColors] objectAtIndex:(arc4random() % [SetPlayingCard validColors].count)];
+    self.drawingString = [self.drawingString stringByAppendingString:_color];
+    return _color;
+}
+
+- (void)setColor:(NSString *)color
+{
+    if([[SetPlayingCard validColors] containsObject:color]) _color = color;
+}
+
+
+// the # of shapes are randomly selected 
+- (NSNumber *)numberOfShapesToDraw
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    //NSArray *validNumberOfShapes = [SetPlayingCard validNumberOfShapes];
+    _numberOfShapesToDraw = [[SetPlayingCard validNumberOfShapes] objectAtIndex:(arc4random() % [SetPlayingCard validNumberOfShapes].count)];
+    
+    // number of shapes to draw
+    self.drawingString = [self.drawingString stringByAppendingString:[NSString stringWithFormat:@"%@", _numberOfShapesToDraw]];
+    return _numberOfShapesToDraw;
+}
+
+
+// setter for the # of shapes "rank" to draw on each card
+- (void)setNumberOfShapesToDraw:(NSNumber *)numberOfShapesToDraw
+{
+    if([[SetPlayingCard validNumberOfShapes] containsObject:numberOfShapesToDraw]) _numberOfShapesToDraw = numberOfShapesToDraw;
+}
+
+// randomly select whether the shape is shaded
+- (NSString *)shaded
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    _shaded = [[SetPlayingCard validShading] objectAtIndex: (arc4random() % [SetPlayingCard validShading].count)];
+    self.drawingString = [self.drawingString stringByAppendingString: _shaded];
+    return _shaded;
+}
+
+- (void)setShaded:(NSString *)shaded
+{
+    if ([[SetPlayingCard validShading] containsObject:shaded]) _shaded = shaded;
+}
 
 // shape "suit" getter
 - (NSString *)shape
 {
-    return _shape ? _shape : @"?";
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    _shape = [[SetPlayingCard validShapes] objectAtIndex:(arc4random() % [SetPlayingCard validShapes].count)];
+    self.drawingString = [self.drawingString stringByAppendingString:_shape];
+    //NSLog(@"%@", self.drawingString);
+    return _shape;
 }
 
 - (void)setShape:(NSString *)shape
@@ -25,34 +95,47 @@
     if ([[SetPlayingCard validShapes] containsObject:shape]) _shape = shape;
 }
 
-// setter for the # of shapes "rank" to draw on each card
-- (void)setNumberOfShapesToDraw:(NSUInteger)numberOfShapesToDraw
-{
-    if(numberOfShapesToDraw <= [SetPlayingCard validNumberOfShapes].count && numberOfShapesToDraw > 0) _numberOfShapesToDraw = numberOfShapesToDraw;
-        
-}
-
 + (int)maxNumberOfShapesOnCard
 {
-    return [self validNumberOfShapes].count -1;
+    return [self validNumberOfShapes].count;
 }
 
 // valid shapes "suit" of the card
 + (NSArray *)validShapes
 {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     return @[@"triangle", @"square", @"rectangle"];
+}
+
++ (NSArray *)validShading
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    return @[@"", @"squiggly", @"solid"];
+}
+
++ (NSArray *)validColors
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    return @[@"red", @"black", @"green"];
 }
 
 
 // the "rank" of the card 
 + (NSArray *)validNumberOfShapes
 {
-    return @[@"?", @1, @2, @3];
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    return @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
 }
 
-+ (BOOL)isShapeShaded:(SetPlayingCard *)card
++ (NSString *)isShapeShaded:(SetPlayingCard *)card
 {
-    return card.shaded ? YES:NO;
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    return [card shaded];
+}
+
+- (int)match:(NSArray *)otherCards
+{
+    return 0;
 }
 
 @end

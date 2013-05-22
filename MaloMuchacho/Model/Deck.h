@@ -11,6 +11,8 @@
 
 @interface Deck : NSObject
 
+@property (nonatomic, readonly) NSMutableArray *cards;
+
 - (void)addCard:(Card *)card cardAtTop:(BOOL)atTop;
 - (Card *)drawRandomCard;
 

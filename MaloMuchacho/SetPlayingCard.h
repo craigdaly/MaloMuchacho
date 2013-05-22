@@ -10,12 +10,17 @@
 
 @interface SetPlayingCard : Card
 
-@property (nonatomic) NSUInteger numberOfShapesToDraw; // 0 ≥ numberOfShapesToDraw ≤ 3 "rank"
-@property (nonatomic) BOOL shaded; // is the shape shaded
-@property (nonatomic, strong) NSString *shape; // triangle, rectangle or square "suit"
+@property (nonatomic) NSNumber *numberOfShapesToDraw; // 0 ≥ numberOfShapesToDraw ≤ 3 "rank"
+@property (nonatomic, weak) NSString *shaded; // is the shape shaded
+@property (nonatomic, weak) NSString *shape; // triangle, rectangle or square "suit"
+@property (nonatomic, weak) NSString *drawingString;
+@property (nonatomic, weak) NSString *color;
+@property BOOL isCardShaded;
 
 + (NSArray *)validShapes;
 + (NSArray *)validNumberOfShapes;
-+ (BOOL)isShapeShaded:(SetPlayingCard *)card;
++ (NSArray *)validColors;
++ (NSArray *)validShading;
++ (NSString *)isShapeShaded:(SetPlayingCard *)card;
 
 @end

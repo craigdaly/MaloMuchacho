@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cardMatchingState;
 @property (nonatomic) int flipCount;
-//@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *dealButton;
 @property (weak, nonatomic) IBOutlet UITabBarItem *barItem;
 
@@ -86,7 +86,7 @@
 
 - (IBAction)dealNewDeckResetUI:(UIButton *)sender
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     
     // forces the setter to instantiate a new CardMatchinGame
     self.game = nil;
@@ -118,22 +118,26 @@
 
 - (NSMutableArray *)cardsFaceUp
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     if(!_cardsFaceUp) _cardsFaceUp = [[NSMutableArray alloc]init];
     return _cardsFaceUp;
 }
 
 // lazily instantiate a CardMatchingGame object
+// for Card Match ... the number of cards == the number of buttons visible on the UIView
+// for Set the deck consists of 81 cards
+
 - (CardMatchingGame *)game
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count] usingDeck:[[PlayingCardDeck alloc] init]];
-    return _game;}
+    return _game;
+}
 
 // setter for the UIBUttons in the IBOutletCollection cardButtons array
 - (void)setCardButtons:(NSArray *)cardButtons
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     _cardButtons = cardButtons;
     [self updateUI];
     
@@ -141,7 +145,7 @@
 
 - (void)viewDidLoad
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     [super viewDidLoad];
     
     // UISegmentedControl is hidden in Assignment #2
@@ -181,7 +185,7 @@
 
 - (void)updateUI
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     
     // set the sliders maxValue to the # of elements in pastMoves
     if([self.pastMoves count]) [self.slider setMaximumValue:([self.pastMoves count] + 1)];
@@ -222,7 +226,7 @@
 // returns the number of cards faceUp
 - (int)numberOfCardsFaceUp:(NSArray *)cardButtons
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     int faceUp = 0;
     for (UIButton *cardButton in self.cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
@@ -237,7 +241,7 @@
 // returns an array containing the cards that are faceUp
 - (NSArray *)whichCardsAreFaceUp:(NSArray *)cardButtons
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     NSMutableArray *faceUp = [NSMutableArray array];
     for(UIButton *cardButton in cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
@@ -253,7 +257,7 @@
 // disables the UISegmentedController
 - (IBAction)flipCard:(UIButton *)sender
 {
-    //NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject: sender]];
     
     // UISegmentedControl is hidden in Assignment #2
